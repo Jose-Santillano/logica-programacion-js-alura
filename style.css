@@ -1,3 +1,16 @@
+/* 
+
+    Colores principales 
+
+    #1354A5 - Azul (Ganador)
+    #a51d13 - Rojo (Perdedor)
+    #1dad10 - Verde (Dificultad facil)
+    #ccc621 - Amarillo (Dificultad media)
+    #e59d18 - Naranja (Dificultad dificil)
+    #8218e5 - Morado (Dificultad imposible)
+    
+*/
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +19,7 @@
 }
 
 body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    background: linear-gradient(#0a0a0a 0%, #020509 33.33%, #040a12 66.67%, #01080E 100%);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -33,8 +46,8 @@ body::before {
     align-items: center;
     justify-content: space-between;
     border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
+    border: 1px solid #a4a4a4;
+    box-shadow: 4px 4px 20px 0px rgba(140, 142, 144, 0.15);
     background-image: url("img/Ruido.png");
     background-size: 100% 100%;
     position: relative;
@@ -54,7 +67,7 @@ body::before {
 
 .container__boton {
     border-radius: 16px;
-    background: #1875E8;
+    background: #010101;
     padding: 16px 24px;
     width: 100%;
     font-size: 24px;
@@ -68,7 +81,7 @@ body::before {
 }
 
 .container__texto-azul {
-    color: #1875E8;
+    color: #f8f8f8;
 }
 
 h1 {
