@@ -4,10 +4,6 @@
 
     #1354A5 - Azul (Ganador)
     #a51d13 - Rojo (Perdedor)
-    #1dad10 - Verde (Dificultad facil)
-    #ccc621 - Amarillo (Dificultad media)
-    #e59d18 - Naranja (Dificultad dificil)
-    #8218e5 - Morado (Dificultad imposible)
     
 */
 
@@ -19,24 +15,12 @@
 }
 
 body {
-    background: linear-gradient(#0a0a0a 0%, #020509 33.33%, #040a12 66.67%, #01080E 100%);
+    background-color: #7034a1cd;
+    background-image: url("img/Ruido.png");
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-
-body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
 }
 
 .container {
@@ -46,7 +30,7 @@ body::before {
     align-items: center;
     justify-content: space-between;
     border-radius: 24px;
-    border: 1px solid #a4a4a4;
+    border: 5px solid #f4f4f4;
     box-shadow: 4px 4px 20px 0px rgba(140, 142, 144, 0.15);
     background-image: url("img/Ruido.png");
     background-size: 100% 100%;
@@ -61,8 +45,12 @@ body::before {
 }
 
 .container__informaciones {
-    flex: 1;
+    display: flex;
     padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
 }
 
 .container__boton {
@@ -78,6 +66,7 @@ body::before {
 
 .container__texto {
     margin: 16px 0 16px 0;
+    text-align: center;
 }
 
 .container__texto-azul {
@@ -98,4 +87,22 @@ button {
 h2 {
     font-size: 32px;
     font-weight: 400;
+}
+
+
+/* Personalizado */
+.logo{
+    width: 10rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ganador{
+    background-color: #1354A5;
+}
+
+.perderdor{
+    background-color: #a51d13;
 }

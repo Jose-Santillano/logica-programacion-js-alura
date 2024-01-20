@@ -5,8 +5,6 @@
     * Ideas a implementar *
     - Que el usuario pueda elegir el numero maximo. LISTO
     - Que el usuario pueda elegir la cantidad de intentos. (facil: 10, medio:   5, dificil: 3, imposible: 1) LISTO
-    - Que el fondo cambie segun el numero de intentos. (facil: verde, medio: amarillo, dificil: rojo)
-    - Que el fondo cambie cuando se gane y tenga un fondo default.
 */
 
 // Variables globales y constantes
@@ -86,6 +84,8 @@ const main = () => {
 
       intentos++;
 
+      mostrarResultadoGanador();
+
       alert(
         `Acertaste, el número es: ${numeroUsuario}. Lo hiciste en ${intentos} ${
           intentos == 1 ? "vez." : "veces."
@@ -100,6 +100,9 @@ const main = () => {
       intentos++;
 
       if (intentos >= maximosIntentos) {
+
+        mostrarResultadoPerdedor();
+
         alert(
           `Llegaste al número máximo de ${maximosIntentos} intentos, el número secreto era: ${numeroSecreto}`
         );
@@ -111,6 +114,26 @@ const main = () => {
 
 // Funciones avanzadas para cambiar fondos, textos, etc.
 
-// *** Ejecución del programa ***
+const ganador = {
+    titulo: "¡Ganaste!",
+    subtitulo: "¡Felicidades 🎉, haz adivinado el numero!"
+}
+const perdedor = {
+    titulo: "¡Perdiste!",
+    subtitulo: "¡Que triste 😢, no haz adivinado el numero!"
+}
 
+// Funcion para mostrar el resultado ganador.
+const mostrarResultadoGanador = () => {
+    document.getElementById("title").innerHTML = ganador.titulo;
+    document.getElementById("description").innerHTML = ganador.subtitulo;
+}
+
+// Funcion para mostrar el resultado perdedor.
+const mostrarResultadoPerdedor = () => {
+    document.getElementById("title").innerHTML = perdedor.titulo;
+    document.getElementById("description").innerHTML = perdedor.subtitulo;
+}
+
+// *** Ejecución del programa ***
 main();
